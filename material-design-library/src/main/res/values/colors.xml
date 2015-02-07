@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="color_primary">#ff608aff</color>
-    <color name="color_primary_dark">#ff5d79ea</color>
-    <color name="navigation_drawer_item_title_color">#212121</color>
-    <color name="navigation_drawer_item_top_background">#f6f6f6</color>
-    <color name="navigation_drawer_item_header_color">#999999</color>
-    <color name="navigation_drawer_item_header_separator_color">#e0e0e0</color>
-</resources>
