@@ -64,9 +64,11 @@ public abstract class NavigationDrawerActivity extends ActionBarActivity {
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-        mNavigationDrawerItems = getNavigationDrawerTopHandler().getNavigationDrawerTopItems();
-        if (mNavigationDrawerItems == null)
+        NavigationDrawerTopHandler navigationDrawerTopHandler = getNavigationDrawerTopHandler();
+        if (navigationDrawerTopHandler == null || navigationDrawerTopHandler.getNavigationDrawerTopItems() == null)
             mNavigationDrawerItems = new ArrayList<>();
+        else
+            mNavigationDrawerItems = navigationDrawerTopHandler.getNavigationDrawerTopItems();
 
         NavigationDrawerAdapter adapter = new NavigationDrawerAdapter(this, R.layout.navigation_drawer_row, mNavigationDrawerItems);
         mDrawerListView = (ListView) findViewById(R.id.left_drawer_listview);
@@ -92,9 +94,13 @@ public abstract class NavigationDrawerActivity extends ActionBarActivity {
 
         });
 
-        List<NavigationDrawerItemBottom> navigationDrawerItemsBottom = getNavigationDrawerBottomHandler().getNavigationDrawerBottomItems();
-        if (navigationDrawerItemsBottom == null)
+        List<NavigationDrawerItemBottom> navigationDrawerItemsBottom;
+        NavigationDrawerBottomHandler navigationDrawerBottomHandler = getNavigationDrawerBottomHandler();
+        if (navigationDrawerBottomHandler == null || navigationDrawerBottomHandler.getNavigationDrawerBottomItems() == null)
             navigationDrawerItemsBottom = new ArrayList<>();
+        else
+            navigationDrawerItemsBottom = getNavigationDrawerBottomHandler().getNavigationDrawerBottomItems();
+
         NavigationDrawerBottomAdapter bottomAdapter = new NavigationDrawerBottomAdapter(this, R.layout.navigation_drawer_row, navigationDrawerItemsBottom);
         final ListView mDrawerBottomListView = (ListView) findViewById(R.id.left_drawer_bottom_listview);
         mDrawerBottomListView.setAdapter(bottomAdapter);

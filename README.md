@@ -13,25 +13,25 @@ It offers a lot of Material Design classes easily to use like NavigationDrawerAc
 
 ```groovy
 dependencies {  
-    compile '**com.blunderer:materialdesignlibrary:1.0.0**'  
+    compile 'com.blunderer:materialdesignlibrary:1.0.0'  
 }
 ```
 
 **2.** In your *values/styles.xml* file, change the parent style and add your own colorPrimary/colorPrimaryDark colors:
 
 ```xml
-<style name="AppTheme" parent="**@style/MaterialDesignAppCompatTheme**">
-    <item name="**colorPrimary**">@color/blue</item>
-    <item name="**colorPrimaryDark**">@color/blue_dark</item>
+<style name="AppTheme" parent="@style/MaterialDesignAppCompatTheme">
+    <item name="colorPrimary">@color/blue</item>
+    <item name="colorPrimaryDark">@color/blue_dark</item>
 </style>
 ```
 
 Or if you want the Light Theme:  
 
 ```xml
-<style name="AppTheme" parent="**@style/MaterialDesignAppCompatTheme.Light**">
-    <item name="**colorPrimary**">@color/blue</item>
-    <item name="**colorPrimaryDark**">@color/blue_dark</item>
+<style name="AppTheme" parent="@style/MaterialDesignAppCompatTheme.Light">
+    <item name="colorPrimary">@color/blue</item>
+    <item name="colorPrimaryDark">@color/blue_dark</item>
 </style>
 ```
 
@@ -41,23 +41,45 @@ Or if you want the Light Theme:
     Your activity will be a basic activity with Material Design.
 
   * **ListViewActivity**  
-	Your activity will contain a ListView (with or not the Material Design Pull To Refresh).
+  Your activity will contain a ListView (with or not the Material Design Pull To Refresh).
 
   * **NavigationDrawerActivity**  
-	Your activity will contain a NavigationDrawer.
+  Your activity will contain a NavigationDrawer.
 
   * **ViewPagerActivity**  
-	Your activity will contain a ViewPager (with or not the indicator).
+  Your activity will contain a ViewPager (with or not the indicator).
 
   * **ViewPagerWithTabsActivity**  
-	Your activity will contain a ViewPager with the tabs.
+  Your activity will contain a ViewPager with the tabs.
 
 ##### Example:  
 ```java
 import com.blunderer.materialdesignlibrary.activities.NavigationDrawerActivity;
 
 public class MyActivity extends NavigationDrawerActivity {
-    ...
+
+    @Override
+    protected NavigationDrawerTopHandler getNavigationDrawerTopHandler() {
+        return new NavigationDrawerTopHandler()
+                .addItem(R.string.app_name, R.drawable.ic_help, new MainFragment())
+                .addItem(R.string.settings, R.drawable.ic_settings, new MainFragment())
+                .addSection(R.string.title_section2)
+                .addItem(R.string.app_name, R.drawable.ic_help, new MainFragment())
+                .addItem(R.string.settings, R.drawable.ic_settings, new MainFragment());
+    }
+
+    @Override
+    protected NavigationDrawerBottomHandler getNavigationDrawerBottomHandler() {
+        return new NavigationDrawerBottomHandler()
+                .addSettings(null)
+                .addHelpAndFeedback(null);
+    }
+
+    @Override
+    protected int defaultNavigationDrawerItemSelectedPosition() {
+        return 0;
+    }
+
 }
 ```
 
