@@ -3,7 +3,7 @@ Material Design Library
 
 
 ### Description
-A library that help developers creating their Android Application with Material Design.  
+A library that helps developers creating their Android Application with Material Design.  
 It offers a lot of Material Design classes easily to use like NavigationDrawerActivity that creates an Activity with a Material Design NavigationDrawer.
 
 
@@ -13,25 +13,25 @@ It offers a lot of Material Design classes easily to use like NavigationDrawerAc
 
 ```groovy
 dependencies {  
-    compile 'com.blunderer:materialdesignlibrary:1.0.0'  
+    compile 'com.blunderer:materialdesignlibrary:1.0.1'  
 }
 ```
 
 **2.** In your *values/styles.xml* file, change the parent style and add your own colorPrimary/colorPrimaryDark colors:
 
 ```xml
-<style name="AppTheme" parent="@style/MaterialDesignAppCompatTheme">
-    <item name="colorPrimary">@color/blue</item>
-    <item name="colorPrimaryDark">@color/blue_dark</item>
+<style name="AppTheme" parent="@style/MaterialDesignLibraryTheme">
+    <item name="colorPrimary">#3f51b5</item>
+    <item name="colorPrimaryDark">#303f9f</item>
 </style>
 ```
 
 Or if you want the Light Theme:  
 
 ```xml
-<style name="AppTheme" parent="@style/MaterialDesignAppCompatTheme.Light">
-    <item name="colorPrimary">@color/blue</item>
-    <item name="colorPrimaryDark">@color/blue_dark</item>
+<style name="AppTheme" parent="@style/MaterialDesignLibraryTheme.Light">
+    <item name="colorPrimary">#3f51b5</item>
+    <item name="colorPrimaryDark">#303f9f</item>
 </style>
 ```
 
@@ -71,8 +71,24 @@ public class MyActivity extends NavigationDrawerActivity {
     @Override
     protected NavigationDrawerBottomHandler getNavigationDrawerBottomHandler() {
         return new NavigationDrawerBottomHandler()
-                .addSettings(null)
-                .addHelpAndFeedback(null);
+                .addSettings(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                        startActivity(intent);
+                    }
+
+                })
+                .addHelpAndFeedback(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), HelpAndFeedbackActivity.class);
+                        startActivity(intent);
+                    }
+
+                });
     }
 
     @Override
