@@ -13,7 +13,7 @@ It offers a lot of Material Design classes easily to use like NavigationDrawerAc
 
 ```groovy
 dependencies {  
-    compile 'com.blunderer:materialdesignlibrary:1.0.1'  
+    compile 'com.blunderer:materialdesignlibrary:1.0.2'  
 }
 ```
 
