@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Material Design Library</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="github">GitHub</string>
+
+    <string name="custom_layout_with_listview">This is a custom Layout containing a ListView with android:id=\"@android:id/list\"</string>
+
+</resources>

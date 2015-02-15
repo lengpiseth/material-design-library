@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.blunderer.materialdesignlibrary.views.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mdl_title="CardView"
+        app:mdl_description="A Top Image CardView"
+        app:mdl_normalButton="Normal"
+        app:mdl_highlightButton="Highlight"
+        app:mdl_imagePosition="top"
+        app:mdl_image="@mipmap/cardview_image_top" />
+
+</FrameLayout>

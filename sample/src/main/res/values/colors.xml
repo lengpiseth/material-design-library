@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#e64e40</color>
+    <color name="color_primary_dark">#c94438</color>
+    <color name="activity_main_row_title_color">#cccccc</color>
+</resources>

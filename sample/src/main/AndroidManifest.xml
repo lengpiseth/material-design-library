@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.blunderer.materialdesignlibrary.sample">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".cardviews.CardViewNormalActivity" />
+        <activity android:name=".cardviews.CardViewWithLeftImageActivity" />
+        <activity android:name=".cardviews.CardViewWithTopImageActivity" />
+        <activity android:name=".navigationdrawers.NavigationDrawerActivity" />
+        <activity android:name=".viewpagers.ViewPagerActivity" />
+        <activity android:name=".viewpagers.ViewPagerWithIndicatorActivity" />
+        <activity android:name=".listviews.ListViewWithRefreshActivity" />
+        <activity android:name=".listviews.ListViewActivity" />
+        <activity android:name=".listviews.ListViewWithCustomLayoutActivity" />
+        <activity android:name=".listviews.ListViewWithRefreshAndCustomLayoutActivity" />
+    </application>
+
+</manifest>
