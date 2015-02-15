@@ -6,6 +6,10 @@ Material Design Library
 A library that helps developers creating their Android Application with Material Design.  
 It offers a lot of Material Design classes easily to use like a CardView or a NavigationDrawerActivity that creates an Activity with a Material Design NavigationDrawer.
 
+### Demo
+[![Material Design Library on Google Play Store](http://developer.android.com/images/brand/en_generic_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.blunderer.materialdesignlibrary.sample)
+
+
 ### Usage
 
 **1.** Add the dependency in your build.gradle.
