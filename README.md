@@ -12,7 +12,7 @@ It offers a lot of Material Design classes easily to use like a CardView or a Na
 
 ```groovy
 dependencies {
-    compile 'com.blunderer:materialdesignlibrary:1.1.0'
+    compile 'com.blunderer:materialdesignlibrary:1.1.1'
 }
 ```
 
@@ -61,11 +61,11 @@ public class MyActivity extends NavigationDrawerActivity {
     @Override
     protected NavigationDrawerTopHandler getNavigationDrawerTopHandler() {
         return new NavigationDrawerTopHandler()
-                .addItem(R.string.app_name, R.drawable.ic_help, new MainFragment())
-                .addItem(R.string.settings, R.drawable.ic_settings, new MainFragment())
+                .addItem(R.string.title_item1, new MainFragment())
+                .addItem(R.string.title_item2, new MainFragment())
                 .addSection(R.string.title_section2)
-                .addItem(R.string.app_name, R.drawable.ic_help, new MainFragment())
-                .addItem(R.string.settings, R.drawable.ic_settings, new MainFragment());
+                .addItem(R.string.title_item3, new MainFragment())
+                .addItem(R.string.title_item4, new MainFragment());
     }
 
     @Override
