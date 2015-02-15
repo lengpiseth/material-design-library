@@ -4,6 +4,10 @@
     <string name="app_name">Material Design Library</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
+    <string name="title_item1">Item 1</string>
+    <string name="title_item2">Item 2</string>
+    <string name="title_item3">Item 3</string>
+    <string name="title_item4">Item 4</string>
     <string name="github">GitHub</string>
 
     <string name="custom_layout_with_listview">This is a custom Layout containing a ListView with android:id=\"@android:id/list\"</string>

@@ -20,7 +20,11 @@ public class ListViewWithRefreshAndCustomLayoutActivity extends com.blunderer.ma
 
     @Override
     protected ListAdapter getListAdapter() {
-        mObjects = new ArrayList<>(Arrays.asList("Item 1", "Item 2", "Item 3"));
+        mObjects = new ArrayList<>(Arrays.asList(
+                getString(R.string.title_item1),
+                getString(R.string.title_item2),
+                getString(R.string.title_item3)
+        ));
         return (mAdapter = new ArrayAdapter<>(this, R.layout.activity_listview_row, mObjects));
     }
 
@@ -60,12 +64,11 @@ public class ListViewWithRefreshAndCustomLayoutActivity extends com.blunderer.ma
 
     @Override
     protected void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Toast.makeText(this, "Item #" + position + " clicked!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Toast.makeText(this, "Item #" + position + " long clicked!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Item " + (position + 1) + " long clicked!", Toast.LENGTH_SHORT).show();
         return true;
     }
 

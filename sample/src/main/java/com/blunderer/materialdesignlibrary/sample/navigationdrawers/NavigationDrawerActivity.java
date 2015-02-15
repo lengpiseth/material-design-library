@@ -11,11 +11,11 @@ public class NavigationDrawerActivity extends com.blunderer.materialdesignlibrar
     protected NavigationDrawerTopHandler getNavigationDrawerTopHandler() {
         return new NavigationDrawerTopHandler()
                 .addSection(R.string.title_section1)
-                .addItem(R.string.app_name, R.drawable.ic_help, MainFragment.newInstance("Material Design NavigationDrawer"))
-                .addItem(R.string.settings, R.drawable.ic_settings, MainFragment.newInstance("Material Design NavigationDrawer"))
+                .addItem(R.string.title_item1, MainFragment.newInstance("Material Design NavigationDrawer"))
+                .addItem(R.string.title_item2, MainFragment.newInstance("Material Design NavigationDrawer"))
                 .addSection(R.string.title_section2)
-                .addItem(R.string.app_name, R.drawable.ic_help, MainFragment.newInstance("Material Design NavigationDrawer"))
-                .addItem(R.string.settings, R.drawable.ic_settings, MainFragment.newInstance("Material Design NavigationDrawer"));
+                .addItem(R.string.title_item3, MainFragment.newInstance("Material Design NavigationDrawer"))
+                .addItem(R.string.title_item4, MainFragment.newInstance("Material Design NavigationDrawer"));
     }
 
     @Override

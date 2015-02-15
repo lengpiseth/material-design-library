@@ -18,6 +18,7 @@ import com.blunderer.materialdesignlibrary.sample.listviews.ListViewWithRefreshA
 import com.blunderer.materialdesignlibrary.sample.navigationdrawers.NavigationDrawerActivity;
 import com.blunderer.materialdesignlibrary.sample.viewpagers.ViewPagerActivity;
 import com.blunderer.materialdesignlibrary.sample.viewpagers.ViewPagerWithIndicatorActivity;
+import com.blunderer.materialdesignlibrary.sample.viewpagers.ViewPagerWithTabsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -123,6 +124,10 @@ public class MainActivity extends com.blunderer.materialdesignlibrary.activities
         viewPagerFeature2.setActivity(ViewPagerWithIndicatorActivity.class);
         viewPagerFeature2.setTitle("With Indicator");
         viewPagerFeature2.setDescription("A ViewPager with an Indicator");
+        MainActivityFeature viewPagerFeature3 = new MainActivityFeature();
+        viewPagerFeature3.setActivity(ViewPagerWithTabsActivity.class);
+        viewPagerFeature3.setTitle("With Tabs");
+        viewPagerFeature3.setDescription("A ViewPager with Tabs");
 
         MainActivityFeature cardviewHeader = new MainActivityFeature();
         cardviewHeader.setHeader(true);
@@ -151,6 +156,7 @@ public class MainActivity extends com.blunderer.materialdesignlibrary.activities
         objects.add(viewPagerHeader);
         objects.add(viewPagerFeature1);
         objects.add(viewPagerFeature2);
+        objects.add(viewPagerFeature3);
         objects.add(cardviewHeader);
         objects.add(cardviewFeature1);
         objects.add(cardviewFeature2);

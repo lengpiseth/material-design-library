@@ -19,6 +19,7 @@
         <activity android:name=".navigationdrawers.NavigationDrawerActivity" />
         <activity android:name=".viewpagers.ViewPagerActivity" />
         <activity android:name=".viewpagers.ViewPagerWithIndicatorActivity" />
+        <activity android:name=".viewpagers.ViewPagerWithTabsActivity" />
         <activity android:name=".listviews.ListViewWithRefreshActivity" />
         <activity android:name=".listviews.ListViewActivity" />
         <activity android:name=".listviews.ListViewWithCustomLayoutActivity" />
