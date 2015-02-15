@@ -4,16 +4,15 @@ Material Design Library
 
 ### Description
 A library that helps developers creating their Android Application with Material Design.  
-It offers a lot of Material Design classes easily to use like NavigationDrawerActivity that creates an Activity with a Material Design NavigationDrawer.
-
+It offers a lot of Material Design classes easily to use like a CardView or a NavigationDrawerActivity that creates an Activity with a Material Design NavigationDrawer.
 
 ### Usage
 
 **1.** Add the dependency in your build.gradle.
 
 ```groovy
-dependencies {  
-    compile 'com.blunderer:materialdesignlibrary:1.0.2'  
+dependencies {
+    compile 'com.blunderer:materialdesignlibrary:1.1.0'
 }
 ```
 
@@ -35,22 +34,23 @@ Or if you want the Light Theme:
 </style>
 ```
 
-**3.** Extends your activity by one of mine (*each activity will be in Material Design*):  
+**3.** Then you can:  
+**-** *Extend your activity* by one of mine (*each activity will be in Material Design*):  
 
   * **Activity**  
-    Your activity will be a basic activity with Material Design.
+    Your Activity will be a basic Activity with Material Design.
 
   * **ListViewActivity**  
-  Your activity will contain a ListView (with or not the Material Design Pull To Refresh).
+  Your Activity will contain a ListView (with or not the Material Design Pull To Refresh).
 
   * **NavigationDrawerActivity**  
-  Your activity will contain a NavigationDrawer.
+  Your Activity will contain a NavigationDrawer.
 
   * **ViewPagerActivity**  
-  Your activity will contain a ViewPager (with or not the indicator).
+  Your Activity will contain a ViewPager (with or not the indicator).
 
   * **ViewPagerWithTabsActivity**  
-  Your activity will contain a ViewPager with the tabs.
+  Your Activity will contain a ViewPager with tabs.
 
 ##### Example:  
 ```java
@@ -99,10 +99,29 @@ public class MyActivity extends NavigationDrawerActivity {
 }
 ```
 
+**-** Or use my CardView:
 
-### Sample
-Coming soon
+  * **Normal CardView**  
+  Your CardView will be a basic CardView.
 
+  * **Left Image CardView**  
+  Your CardView will contain an image on the left.
+
+  * **Top Image CardView**  
+  Your CardView will contain an image on the top.
+
+##### Example:  
+```xml
+<com.blunderer.materialdesignlibrary.views.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mdl_title="CardView"
+        app:mdl_description="A Left Image CardView"
+        app:mdl_normalButton="Normal"
+        app:mdl_highlightButton="Highlight"
+        app:mdl_imagePosition="left"
+        app:mdl_image="@drawable/image" />
+```
 
 ### Developed by
 
