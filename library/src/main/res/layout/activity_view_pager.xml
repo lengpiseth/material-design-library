@@ -31,9 +31,9 @@
             android:visibility="invisible"
             app:centered="true"
             app:radius="5dp"
-            app:fillColor="@android:color/white"
-            app:pageColor="?attr/colorPrimary"
-            app:snap="true"
+            app:fillColor="?attr/colorPrimary"
+            app:pageColor="@android:color/white"
+            app:snap="false"
             app:strokeColor="?attr/colorPrimaryDark" />
 
     </FrameLayout>

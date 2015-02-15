@@ -19,7 +19,7 @@
         android:background="?attr/colorPrimary"
         app:pstsUnderlineHeight="0dp"
         app:pstsUnderlineColor="@android:color/transparent"
-        app:pstsIndicatorColor="?attr/colorPrimaryDark"
+        app:pstsIndicatorColor="@android:color/white"
         app:pstsIndicatorHeight="5dp"
         app:pstsDividerColor="?attr/colorPrimaryDark" />
 

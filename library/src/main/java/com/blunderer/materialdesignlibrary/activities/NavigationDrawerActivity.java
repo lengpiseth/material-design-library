@@ -99,7 +99,7 @@ public abstract class NavigationDrawerActivity extends ActionBarActivity {
         if (navigationDrawerBottomHandler == null || navigationDrawerBottomHandler.getNavigationDrawerBottomItems() == null)
             navigationDrawerItemsBottom = new ArrayList<>();
         else
-            navigationDrawerItemsBottom = getNavigationDrawerBottomHandler().getNavigationDrawerBottomItems();
+            navigationDrawerItemsBottom = navigationDrawerBottomHandler.getNavigationDrawerBottomItems();
 
         NavigationDrawerBottomAdapter bottomAdapter = new NavigationDrawerBottomAdapter(this, R.layout.navigation_drawer_row, navigationDrawerItemsBottom);
         final ListView mDrawerBottomListView = (ListView) findViewById(R.id.left_drawer_bottom_listview);

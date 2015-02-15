@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import com.astuetz.PagerSlidingTabStrip;
 import com.blunderer.materialdesignlibrary.R;
 import com.blunderer.materialdesignlibrary.adapters.ViewPagerWithTabsAdapter;
+import com.blunderer.materialdesignlibrary.handlers.ViewPagerHandler;
 import com.blunderer.materialdesignlibrary.models.ViewPagerItem;
 
 import java.util.List;
@@ -25,7 +26,11 @@ public abstract class ViewPagerWithTabsActivity extends ActionBarActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        List<ViewPagerItem> viewPagerItems = getViewPagerItems();
+        List<ViewPagerItem> viewPagerItems = null;
+        ViewPagerHandler handler = getViewPagerHandler();
+        if (handler != null && handler.getViewPagerItems() != null)
+            viewPagerItems = handler.getViewPagerItems();
+
         if (viewPagerItems != null && viewPagerItems.size() > 0) {
             ViewPager pager = (ViewPager) findViewById(R.id.viewpager);
             pager.setAdapter(new ViewPagerWithTabsAdapter(this, getSupportFragmentManager(), viewPagerItems));
@@ -41,7 +46,7 @@ public abstract class ViewPagerWithTabsActivity extends ActionBarActivity {
         }
     }
 
-    protected abstract List<ViewPagerItem> getViewPagerItems();
+    protected abstract ViewPagerHandler getViewPagerHandler();
 
     protected abstract int defaultViewPagerItemSelectedPosition();
 

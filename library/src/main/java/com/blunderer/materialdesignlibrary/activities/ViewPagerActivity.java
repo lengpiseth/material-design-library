@@ -44,7 +44,10 @@ public abstract class ViewPagerActivity extends ActionBarActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        viewPagerItems = getViewPagerHandler().getViewPagerItems();
+        ViewPagerHandler handler = getViewPagerHandler();
+        if (handler != null && handler.getViewPagerItems() != null)
+            viewPagerItems = handler.getViewPagerItems();
+
         if (viewPagerItems != null && viewPagerItems.size() > 0) {
             ViewPager pager = (ViewPager) findViewById(R.id.viewpager);
             pager.setAdapter(new ViewPagerWithTabsAdapter(this, getSupportFragmentManager(), viewPagerItems));
