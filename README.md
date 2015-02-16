@@ -9,8 +9,8 @@ It offers a lot of Material Design classes easily to use like a CardView or a Na
 ### Demo
 [![Material Design Library on Google Play Store](http://developer.android.com/images/brand/en_generic_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.blunderer.materialdesignlibrary.sample)
 
-![ListView with Pull To Refresh](images/screen02.png) ![CardView with Image on the Top](images/screen07.png)
-
+![NavigationDrawer](images/screen06.png) ![CardView with Image on the Top](images/screen07.png)
+![ListView with Pull To Refresh](images/screen02.png) ![ViewPager with Tabs](images/screen05.png)
 
 ### Usage
 
